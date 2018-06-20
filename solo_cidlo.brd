@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.25" altunitdist="mm" altunit="mm"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -74,14 +74,19 @@
 </layers>
 <board>
 <plain>
-<wire x1="17" y1="0" x2="47" y2="0" width="0" layer="20"/>
-<wire x1="47" y1="0" x2="47" y2="10" width="0" layer="20"/>
-<wire x1="47" y1="10" x2="17" y2="10" width="0" layer="20"/>
-<wire x1="17" y1="10" x2="17" y2="0" width="0" layer="20"/>
+<wire x1="13" y1="0" x2="54" y2="0" width="0" layer="20"/>
+<wire x1="54" y1="0" x2="54" y2="10" width="0" layer="20"/>
+<wire x1="54" y1="10" x2="13" y2="10" width="0" layer="20"/>
+<wire x1="13" y1="10" x2="13" y2="0" width="0" layer="20"/>
 <text x="42" y="8.25" size="1.778" layer="37" rot="R180">GND</text>
 <text x="42" y="5.75" size="1.778" layer="37" rot="R180">VCC</text>
 <text x="42" y="3.25" size="1.778" layer="37" rot="R180">S1</text>
-<text x="25" y="1" size="1.778" layer="37">°</text>
+<text x="25" y="6.25" size="1.778" layer="37">°</text>
+<hole x="16" y="5" drill="3"/>
+<hole x="51" y="5" drill="3"/>
+<text x="22.75" y="2.5" size="1" layer="51" rot="R180">S1</text>
+<text x="26" y="6.25" size="1.778" layer="52" rot="MR0">°</text>
+<text x="46" y="1.875" size="1.75" layer="51">°</text>
 </plain>
 <libraries>
 <library name="pinhead" urn="urn:adsk.eagle:library:325">
@@ -1229,6 +1234,17 @@ source Beyschlag</description>
 <text x="-1.27" y="0.9525" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="-2.2225" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="R0201" urn="urn:adsk.eagle:footprint:25683/1" library_version="1">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt; chip&lt;p&gt;
+Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
+<smd name="1" x="-0.255" y="0" dx="0.28" dy="0.43" layer="1"/>
+<smd name="2" x="0.255" y="0" dx="0.28" dy="0.43" layer="1"/>
+<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.3" y1="-0.15" x2="-0.15" y2="0.15" layer="51"/>
+<rectangle x1="0.15" y1="-0.15" x2="0.3" y2="0.15" layer="51"/>
+<rectangle x1="-0.15" y1="-0.15" x2="0.15" y2="0.15" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="MINI_MELF-0102W" urn="urn:adsk.eagle:package:26105/1" type="box" library_version="1">
@@ -1236,6 +1252,53 @@ source Beyschlag</description>
 source Beyschlag</description>
 <packageinstances>
 <packageinstance name="MINI_MELF-0102W"/>
+</packageinstances>
+</package3d>
+<package3d name="R0201" urn="urn:adsk.eagle:package:26117/1" type="box" library_version="1">
+<description>RESISTOR chip
+Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
+<packageinstances>
+<packageinstance name="R0201"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
+<library name="led" urn="urn:adsk.eagle:library:259">
+<description>&lt;b&gt;LEDs&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;&lt;br&gt;
+Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternational.com&amp;gt;&lt;/author&gt; with DUOLED</description>
+<packages>
+<package name="CHIPLED_0603" urn="urn:adsk.eagle:footprint:15676/1" library_version="2">
+<description>&lt;b&gt;CHIPLED&lt;/b&gt;&lt;p&gt;
+Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
+<wire x1="-0.3" y1="0.8" x2="0.3" y2="0.8" width="0.1016" layer="51" curve="170.055574"/>
+<wire x1="-0.275" y1="-0.825" x2="0.275" y2="-0.825" width="0.0508" layer="51" curve="-180"/>
+<wire x1="-0.4" y1="0.375" x2="-0.4" y2="-0.35" width="0.1016" layer="51"/>
+<wire x1="0.4" y1="0.35" x2="0.4" y2="-0.35" width="0.1016" layer="51"/>
+<circle x="-0.35" y="0.625" radius="0.075" width="0.0508" layer="51"/>
+<smd name="C" x="0" y="0.75" dx="0.8" dy="0.8" layer="1"/>
+<smd name="A" x="0" y="-0.75" dx="0.8" dy="0.8" layer="1"/>
+<text x="-0.635" y="-1.27" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.905" y="-1.27" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-0.45" y1="0.7" x2="-0.25" y2="0.85" layer="51"/>
+<rectangle x1="-0.275" y1="0.55" x2="-0.225" y2="0.6" layer="51"/>
+<rectangle x1="-0.45" y1="0.35" x2="-0.4" y2="0.725" layer="51"/>
+<rectangle x1="0.25" y1="0.55" x2="0.45" y2="0.85" layer="51"/>
+<rectangle x1="-0.45" y1="0.35" x2="0.45" y2="0.575" layer="51"/>
+<rectangle x1="-0.45" y1="-0.85" x2="-0.25" y2="-0.35" layer="51"/>
+<rectangle x1="0.25" y1="-0.85" x2="0.45" y2="-0.35" layer="51"/>
+<rectangle x1="-0.275" y1="-0.575" x2="0.275" y2="-0.35" layer="51"/>
+<rectangle x1="-0.275" y1="-0.65" x2="-0.175" y2="-0.55" layer="51"/>
+<rectangle x1="0.175" y1="-0.65" x2="0.275" y2="-0.55" layer="51"/>
+<rectangle x1="-0.125" y1="0" x2="0.125" y2="0.25" layer="21"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="CHIPLED_0603" urn="urn:adsk.eagle:package:15822/2" type="model" library_version="2">
+<description>CHIPLED
+Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
+<packageinstances>
+<packageinstance name="CHIPLED_0603"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1443,20 +1506,27 @@ design rules under a new name.</description>
 <attribute name="NAME" x="28.98" y="3.4525" size="1.27" layer="25"/>
 </element>
 <element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="MINI_MELF-0102W" package3d_urn="urn:adsk.eagle:package:26105/1" value="10 k" x="27.5" y="6" smashed="yes">
-<attribute name="NAME" x="29.23" y="5.4525" size="1.27" layer="25"/>
+<attribute name="NAME" x="28.98" y="5.4525" size="1.27" layer="25"/>
 </element>
-<element name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X03" package3d_urn="urn:adsk.eagle:package:22458/2" value="" x="44" y="5" smashed="yes" rot="R90">
-<attribute name="VALUE" x="47.175" y="1.19" size="1.27" layer="27" rot="R90"/>
+<element name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X03" package3d_urn="urn:adsk.eagle:package:22458/2" value="" x="43.75" y="5" smashed="yes" rot="R90">
+<attribute name="VALUE" x="46.925" y="1.19" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="" x="46.5" y="5" smashed="yes" rot="R180">
+<attribute name="NAME" x="47.135" y="6.52" size="0.8" layer="25" rot="R270"/>
+<attribute name="VALUE" x="44.595" y="6.27" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0201" package3d_urn="urn:adsk.eagle:package:26117/1" value="330" x="46.5" y="6.875" smashed="yes" rot="R90">
+<attribute name="NAME" x="46.9225" y="7.23" size="0.8" layer="25" rot="R90"/>
 </element>
 </elements>
 <signals>
-<signal name="N$1">
+<signal name="IL1">
 <contactref element="S1" pad="P$3"/>
 <contactref element="R1" pad="1"/>
 <wire x1="26.55" y1="4" x2="23.3368" y2="4" width="1.016" layer="1"/>
 <wire x1="23.3368" y1="4" x2="23.27" y2="3.9332" width="1.016" layer="1"/>
 </signal>
-<signal name="N$2">
+<signal name="S1">
 <contactref element="S1" pad="P$1"/>
 <contactref element="R2" pad="1"/>
 <contactref element="JP2" pad="1"/>
@@ -1466,29 +1536,46 @@ design rules under a new name.</description>
 <via x="25" y="6.0414" extent="1-16" drill="0.35"/>
 <wire x1="25" y1="6.0414" x2="25" y2="4" width="1.016" layer="16"/>
 <wire x1="25" y1="4" x2="26.54" y2="2.46" width="1.016" layer="16"/>
-<wire x1="26.54" y1="2.46" x2="44" y2="2.46" width="1.016" layer="16"/>
+<wire x1="26.54" y1="2.46" x2="43.75" y2="2.46" width="1.016" layer="16"/>
 </signal>
 <signal name="GND">
 <polygon width="0.1524" layer="16">
-<vertex x="15" y="12"/>
-<vertex x="15" y="-2"/>
-<vertex x="49" y="-2"/>
-<vertex x="49" y="12"/>
+<vertex x="19" y="10"/>
+<vertex x="19" y="0"/>
+<vertex x="49.5" y="0"/>
+<vertex x="49.5" y="10"/>
 </polygon>
 <contactref element="S1" pad="P$4"/>
 <contactref element="S1" pad="P$2"/>
 <contactref element="JP2" pad="3"/>
+<wire x1="43.75" y1="7.54" x2="44.46" y2="7.54" width="2.54" layer="16"/>
+<wire x1="43.75" y1="7.54" x2="42.54" y2="7.54" width="2.54" layer="16"/>
+<contactref element="LED1" pad="C"/>
+<wire x1="46.5" y1="4.25" x2="46.5" y2="3.25" width="0.8128" layer="1"/>
+<via x="46.5" y="3.25" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="+5V">
 <contactref element="JP2" pad="2"/>
 <contactref element="R2" pad="2"/>
 <contactref element="R1" pad="2"/>
 <polygon width="0.1524" layer="1">
-<vertex x="16" y="11"/>
-<vertex x="16" y="-1"/>
-<vertex x="48" y="-1"/>
-<vertex x="48" y="11"/>
+<vertex x="19" y="10"/>
+<vertex x="19" y="0"/>
+<vertex x="49.5" y="0"/>
+<vertex x="49.5" y="10"/>
 </polygon>
+<wire x1="28.45" y1="6" x2="30" y2="6" width="1.016" layer="1"/>
+<wire x1="28.45" y1="4" x2="30" y2="4" width="1.016" layer="1"/>
+<wire x1="28.45" y1="4" x2="27.7184" y2="4" width="1.016" layer="1"/>
+<wire x1="28.45" y1="6" x2="28" y2="6" width="1.016" layer="1"/>
+<wire x1="43.75" y1="5" x2="42.5" y2="5" width="2.54" layer="1"/>
+<wire x1="43.75" y1="5" x2="44.5612125" y2="5" width="2.54" layer="1"/>
+<contactref element="R3" pad="2"/>
+</signal>
+<signal name="KL1">
+<contactref element="R3" pad="1"/>
+<contactref element="LED1" pad="A"/>
+<wire x1="46.5" y1="6.62" x2="46.5" y2="5.75" width="0.45" layer="1"/>
 </signal>
 </signals>
 </board>
