@@ -9,20 +9,20 @@
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="yes"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="yes"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="yes"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="yes"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="yes"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="yes"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="yes"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="yes"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -78,17 +78,17 @@
 <wire x1="54" y1="0" x2="54" y2="10" width="0" layer="20"/>
 <wire x1="54" y1="10" x2="13" y2="10" width="0" layer="20"/>
 <wire x1="13" y1="10" x2="13" y2="0" width="0" layer="20"/>
-<text x="42" y="8.25" size="1.778" layer="37" rot="R180">GND</text>
-<text x="42" y="5.75" size="1.778" layer="37" rot="R180">VCC</text>
-<text x="42" y="3.25" size="1.778" layer="37" rot="R180">S1</text>
+<text x="42" y="8.25" size="1.778" layer="37" font="vector" ratio="20" rot="R180">GND</text>
+<text x="42" y="5.75" size="1.778" layer="37" font="vector" ratio="20" rot="R180">VCC</text>
+<text x="42" y="3.25" size="1.778" layer="37" font="vector" ratio="20" rot="R180">S1</text>
 <text x="25" y="6.25" size="1.778" layer="37">°</text>
 <hole x="16" y="5" drill="3"/>
 <hole x="51" y="5" drill="3"/>
-<text x="22.75" y="2.5" size="1" layer="51" rot="R180">S1</text>
+<text x="21.25" y="7.5" size="0.8128" layer="51" font="vector" ratio="20" rot="SR0">S1</text>
 <text x="26" y="6.25" size="1.778" layer="52" rot="MR0">°</text>
 <text x="46" y="1.875" size="1.75" layer="51">°</text>
-<text x="49" y="4" size="1.778" layer="52" rot="MR0">QRD_1114-solo_0,1</text>
-<text x="24" y="1" size="1.15" layer="51">QRD_1114-solo_0,1</text>
+<text x="19.5" y="0.375" size="1.15" layer="51" font="vector" ratio="20" rot="SR0">QRD1114-solo v1.0</text>
+<text x="19.5" y="8.75" size="0.8128" layer="51" font="vector" ratio="20" rot="SR0">TVavrinec</text>
 </plain>
 <libraries>
 <library name="pinhead" urn="urn:adsk.eagle:library:325">
@@ -1236,16 +1236,21 @@ source Beyschlag</description>
 <text x="-1.27" y="0.9525" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="-2.2225" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="R0201" urn="urn:adsk.eagle:footprint:25683/1" library_version="1">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt; chip&lt;p&gt;
-Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
-<smd name="1" x="-0.255" y="0" dx="0.28" dy="0.43" layer="1"/>
-<smd name="2" x="0.255" y="0" dx="0.28" dy="0.43" layer="1"/>
+<package name="R0603" urn="urn:adsk.eagle:footprint:25626/1" library_version="1">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
+<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
 <text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.3" y1="-0.15" x2="-0.15" y2="0.15" layer="51"/>
-<rectangle x1="0.15" y1="-0.15" x2="0.3" y2="0.15" layer="51"/>
-<rectangle x1="-0.15" y1="-0.15" x2="0.15" y2="0.15" layer="21"/>
+<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
+<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
 </package>
 </packages>
 <packages3d>
@@ -1256,11 +1261,10 @@ source Beyschlag</description>
 <packageinstance name="MINI_MELF-0102W"/>
 </packageinstances>
 </package3d>
-<package3d name="R0201" urn="urn:adsk.eagle:package:26117/1" type="box" library_version="1">
-<description>RESISTOR chip
-Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
+<package3d name="R0603" urn="urn:adsk.eagle:package:26057/1" type="box" library_version="1">
+<description>RESISTOR</description>
 <packageinstances>
-<packageinstance name="R0201"/>
+<packageinstance name="R0603"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1314,7 +1318,7 @@ Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default">
+<designrules name="robotikabrno *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -1322,71 +1326,73 @@ die meisten Anwendungen passen. Sollte ihre Platine
 besondere Anforderungen haben, treffen Sie die erforderlichen
 Einstellungen hier und speichern die Design Rules unter 
 einem neuen Namen ab.</description>
-<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+<description language="en">&lt;b&gt;RobotikaBrno DRC&lt;/b&gt;
+
 &lt;p&gt;
-The default Design Rules have been set to cover
-a wide range of applications. Your particular design
-may have different requirements, so please make the
-necessary adjustments and save your customized
-design rules under a new name.</description>
-<param name="layerSetup" value="(1*16)"/>
+This DRC includes the common parameters for two-layer PCBs. Should be compatible with:
+&lt;ul&gt;
+&lt;li&gt;Gatema POOL Servis&lt;/li&gt;
+&lt;li&gt;JLCPCB (no extras)&lt;/li&gt;
+&lt;li&gt;AllPCB (no extras)&lt;/li&gt;
+&lt;/ul&gt;</description>
+<param name="layerSetup" value="(1+16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="6mil"/>
-<param name="mdWirePad" value="6mil"/>
-<param name="mdWireVia" value="6mil"/>
-<param name="mdPadPad" value="6mil"/>
-<param name="mdPadVia" value="6mil"/>
-<param name="mdViaVia" value="6mil"/>
-<param name="mdSmdPad" value="6mil"/>
-<param name="mdSmdVia" value="6mil"/>
-<param name="mdSmdSmd" value="6mil"/>
+<param name="mdWireWire" value="0.2mm"/>
+<param name="mdWirePad" value="0.2mm"/>
+<param name="mdWireVia" value="0.2mm"/>
+<param name="mdPadPad" value="0.2mm"/>
+<param name="mdPadVia" value="0.2mm"/>
+<param name="mdViaVia" value="0.2mm"/>
+<param name="mdSmdPad" value="0.2mm"/>
+<param name="mdSmdVia" value="0.2mm"/>
+<param name="mdSmdSmd" value="0.2mm"/>
 <param name="mdViaViaSameLayer" value="6mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="40mil"/>
-<param name="mdDrill" value="6mil"/>
+<param name="mdCopperDimension" value="0.5mm"/>
+<param name="mdDrill" value="0.5mm"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="6mil"/>
+<param name="msWidth" value="0.2mm"/>
 <param name="msDrill" value="0.35mm"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
-<param name="rvPadTop" value="0.25"/>
-<param name="rvPadInner" value="0.25"/>
-<param name="rvPadBottom" value="0.25"/>
-<param name="rvViaOuter" value="0.25"/>
-<param name="rvViaInner" value="0.25"/>
+<param name="rvPadTop" value="0.35"/>
+<param name="rvPadInner" value="0.35"/>
+<param name="rvPadBottom" value="0.35"/>
+<param name="rvViaOuter" value="0.35"/>
+<param name="rvViaInner" value="0.35"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="10mil"/>
-<param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="10mil"/>
-<param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="10mil"/>
-<param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="8mil"/>
-<param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="8mil"/>
-<param name="rlMaxViaInner" value="20mil"/>
+<param name="rlMinPadTop" value="0.16mm"/>
+<param name="rlMaxPadTop" value="1mm"/>
+<param name="rlMinPadInner" value="0.16mm"/>
+<param name="rlMaxPadInner" value="1mm"/>
+<param name="rlMinPadBottom" value="0.16mm"/>
+<param name="rlMaxPadBottom" value="1mm"/>
+<param name="rlMinViaOuter" value="0.16mm"/>
+<param name="rlMaxViaOuter" value="1mm"/>
+<param name="rlMinViaInner" value="0.16mm"/>
+<param name="rlMaxViaInner" value="1mm"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
 <param name="rlMinMicroViaInner" value="4mil"/>
 <param name="rlMaxMicroViaInner" value="20mil"/>
-<param name="psTop" value="-1"/>
-<param name="psBottom" value="-1"/>
-<param name="psFirst" value="-1"/>
+<param name="psTop" value="1"/>
+<param name="psBottom" value="1"/>
+<param name="psFirst" value="1"/>
 <param name="psElongationLong" value="100"/>
 <param name="psElongationOffset" value="100"/>
-<param name="mvStopFrame" value="1"/>
+<param name="mvStopFrame" value="0.1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="4mil"/>
-<param name="mlMaxStopFrame" value="4mil"/>
+<param name="mlMinStopFrame" value="0.1mm"/>
+<param name="mlMaxStopFrame" value="0.2mm"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="0.4mm"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
-<param name="slThermalIsolate" value="10mil"/>
+<param name="slThermalIsolate" value="0.2mm"/>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
@@ -1500,25 +1506,24 @@ design rules under a new name.</description>
 <attribute name="DESCRIPTION" value=" QRD1114 Series 30 V 50 mA Phototransistor Reflective Object Sensor " x="22" y="5" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MF" value="ON Semiconductor" x="22" y="5" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MP" value="QRD1114" x="22" y="5" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="NAME" x="22.865190625" y="1.5158" size="1.01728125" layer="26" rot="MR0"/>
 <attribute name="PACKAGE" value="Radial-4 ON Semiconductor" x="22" y="5" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="PRICE" value="0.97 USD" x="22" y="5" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="MINI_MELF-0102W" package3d_urn="urn:adsk.eagle:package:26105/1" value="330" x="27.5" y="4" smashed="yes">
-<attribute name="NAME" x="28.98" y="3.4525" size="1.27" layer="25"/>
+<attribute name="NAME" x="28.98" y="3.4525" size="1.27" layer="25" font="vector" ratio="20"/>
 </element>
 <element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="MINI_MELF-0102W" package3d_urn="urn:adsk.eagle:package:26105/1" value="10 k" x="27.5" y="6" smashed="yes">
-<attribute name="NAME" x="28.98" y="5.4525" size="1.27" layer="25"/>
+<attribute name="NAME" x="28.98" y="5.4525" size="1.27" layer="25" font="vector" ratio="20"/>
 </element>
 <element name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X03" package3d_urn="urn:adsk.eagle:package:22458/2" value="" x="43.75" y="5" smashed="yes" rot="R90">
 <attribute name="VALUE" x="46.925" y="1.19" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="" x="46.5" y="5" smashed="yes" rot="R180">
-<attribute name="NAME" x="47.135" y="6.52" size="0.8" layer="25" rot="R270"/>
-<attribute name="VALUE" x="44.595" y="6.27" size="1.27" layer="27" rot="R270"/>
+<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="" x="46.5" y="3" smashed="yes" rot="R180">
+<attribute name="NAME" x="47.135" y="4.52" size="0.8" layer="25" font="vector" ratio="20" rot="R270"/>
+<attribute name="VALUE" x="44.595" y="4.27" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0201" package3d_urn="urn:adsk.eagle:package:26117/1" value="330" x="46.5" y="6.875" smashed="yes" rot="R90">
-<attribute name="NAME" x="46.9225" y="7.23" size="0.8" layer="25" rot="R90"/>
+<element name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="330" x="46.5" y="7.875" smashed="yes" rot="R90">
+<attribute name="NAME" x="46.9225" y="8.23" size="0.8" layer="25" font="vector" ratio="20" rot="R90"/>
 </element>
 </elements>
 <signals>
@@ -1541,7 +1546,7 @@ design rules under a new name.</description>
 <wire x1="26.54" y1="2.46" x2="43.75" y2="2.46" width="1.016" layer="16"/>
 </signal>
 <signal name="GND">
-<polygon width="0.1524" layer="16">
+<polygon width="0.2" layer="16">
 <vertex x="19" y="10"/>
 <vertex x="19" y="0"/>
 <vertex x="48.5" y="0"/>
@@ -1550,30 +1555,30 @@ design rules under a new name.</description>
 <contactref element="S1" pad="P$4"/>
 <contactref element="S1" pad="P$2"/>
 <contactref element="JP2" pad="3"/>
-<wire x1="43.75" y1="7.54" x2="44.46" y2="7.54" width="2.54" layer="16"/>
-<wire x1="43.75" y1="7.54" x2="42.54" y2="7.54" width="2.54" layer="16"/>
+<wire x1="43.75" y1="7.54" x2="44.46" y2="7.54" width="1.27" layer="16"/>
+<wire x1="43.75" y1="7.54" x2="42.54" y2="7.54" width="1.27" layer="16"/>
 <contactref element="LED1" pad="C"/>
-<wire x1="46.5" y1="4.25" x2="46.5" y2="3.25" width="0.8128" layer="1"/>
-<via x="46.5" y="3.25" extent="1-16" drill="0.35"/>
+<wire x1="46.5" y1="2.25" x2="46.5" y2="1.25" width="0.8128" layer="1"/>
+<via x="46.5" y="1.25" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="+5V">
 <contactref element="JP2" pad="2"/>
 <contactref element="R2" pad="2"/>
 <contactref element="R1" pad="2"/>
-<polygon width="0.1524" layer="1">
+<polygon width="0.2" layer="1">
 <vertex x="19" y="10"/>
 <vertex x="19" y="0"/>
 <vertex x="48.5" y="0"/>
 <vertex x="48.5" y="10"/>
 </polygon>
-<wire x1="43.75" y1="5" x2="42.5" y2="5" width="2.54" layer="1"/>
-<wire x1="43.75" y1="5" x2="44.5612125" y2="5" width="2.54" layer="1"/>
+<wire x1="43.75" y1="5" x2="42.5" y2="5" width="1.27" layer="1"/>
+<wire x1="43.75" y1="5" x2="44.5612125" y2="5" width="1.27" layer="1"/>
 <contactref element="R3" pad="2"/>
 </signal>
 <signal name="KL1">
 <contactref element="R3" pad="1"/>
 <contactref element="LED1" pad="A"/>
-<wire x1="46.5" y1="6.62" x2="46.5" y2="5.75" width="0.45" layer="1"/>
+<wire x1="46.5" y1="3.75" x2="46.5" y2="7.025" width="0.6096" layer="1"/>
 </signal>
 </signals>
 </board>
